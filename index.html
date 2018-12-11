@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Turtle Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
+<div class="game">
+	<div class="stage">
+		<div>
+			<img src="assets/images/top_turtle.png">
+			<div id="health"></div>
+			<div id="score">0</div>
+		</div>
+		<img src="assets/images/turtle_normal.png" id="Iam" pass="2">
+	</div>
+	<div class="buttons">
+		<button id="back" class="btn"><</button><button id="front" class="btn">></button><button id="atk" class="btn">ATK</button><button id="sp" class="btn">SPECIAL<div></div></button>
+	</div>
+</div>
+<div class="mobile-menu">
+	<div>
+		<p>Rotacione a tela para iniciar...</p>
+		<button onclick="full()">Iniciar FullScreen</button>
+	</div>
+</div>
+</body>
+</html>
