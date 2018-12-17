@@ -122,10 +122,11 @@ function begin(){
 	var full=1;
 	var rotate=1;
 	mobile=false;
-	if(screenSize()==undefined)	full=0;
-	if(window.innerWidth < 600) rotate=0;
-	if(window.innerWidth > 800) full=rotate=1; else mobile=true;
-	
+	if(location.hash==""){
+		if(screenSize()==undefined)	full=0;
+		if(window.innerWidth < 600) rotate=0;
+		if(window.innerWidth > 800) full=rotate=1; else mobile=true;
+	}
 	if(rotate==0) $(".mobile-menu p").show(); else  $(".mobile-menu p").hide();
 	if(full==0 || rotate==0) $(".mobile-menu").show(); else{ 
 		$(".mobile-menu").hide();
