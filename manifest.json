@@ -1,0 +1,14 @@
+{
+  "short_name": "turtleGame",
+  "name": "Turtle Game 2D",
+  "theme_color": "#63a700",
+  "background_color": "#63a700",
+  "icons": [
+    {
+      "src": "assets/images/facebook_image.png",
+      "type": "image/png",
+      "sizes": "160x160"
+    }],
+  "display": "fullscreen",
+  "orientation": "landscape"
+}
