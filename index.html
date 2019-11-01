@@ -1,14 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 	<title>Turtle Game</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="author" content="Matheus Costa" />
+	<meta name="keywords" content="turtleGame, Teenage Mutant Ninja Turtles, turtle ninja, html, javascript, tartaruga ninja" />
+	<meta name="description" content="Jogo 2d das tartaruga ninja feito com javascript e html tags, feito para ser jogado no computador ou smartphone." />
+	<meta property="og:title" content="Turtle Game" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Jogo 2d das tartaruga ninja feito com javascript e html tags" />
+	<meta property="og:url" content="https://mthcsta.github.io/turtleGame" />
+	<meta property="og:site_name" content="Site Pessoal de Matheus Costa" />
+	<meta property="og:image" content="https://mthcsta.github.io/turtleGame/assets/images/facebook_image.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="160">
+	<meta property="og:image:height" content="160">
 	<link rel="manifest" href="manifest.json">
 	<link rel="stylesheet" href="assets/css/style.min.css" type="text/css" />
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 	<script src="assets/js/script.min.js"></script>
 </head>
 <body>
+<div id="statusBar"></div>
 <div class="game">
 	<div class="stage">
 		<div>
@@ -25,7 +39,7 @@
 <div class="mobile-menu">
 	<div>
 		<p>Rotacione a tela para iniciar...</p>
-		<button onclick="full()">Iniciar FullScreen</button>
+		<button onclick="fullscreen()">Iniciar FullScreen</button>
 	</div>
 </div>
 <div class="load-images">
@@ -46,11 +60,21 @@
 </div>
 <div class="loading" style="background:black;width:100%;height:100%;position:fixed;left:0;top:0;text-align:center;">Loading...</div>
 <script>
-z=2;	
+z=2;
 window.onload=function(){
 	$(".load-images").remove();
 	$(".loading").hide(500);
 }
+// autoinvoke statusBar
+(function(){
+	if(window.innerWidth > 800){
+		var script = document.createElement("script");
+		script.src = "https://mthcsta.github.io/statusBar/script.js";
+		script.setAttribute("defer",true);
+		document.body.appendChild(script);
+	}
+}());
 </script>
+
 </body>
 </html>
