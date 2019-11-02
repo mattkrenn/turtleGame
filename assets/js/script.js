@@ -14,8 +14,9 @@ var specialFrame=0;
 var music=false;
 
 // check exist function onfullscreenchange:
+var fullscreenchange=true;
 if(document.onfullscreenchange===undefined)
-	var fullscreenchange=false;
+	fullscreenchange=false;
 
 function CreateEnemie(){
 	if($(".stage").length<9){
@@ -88,9 +89,10 @@ function begin(){
 	var full=1;
 	var rotate=1;
 	mobile=false;
+	$(".mobile-menu").height(window.innerHeight);
 	if(location.hash==""){
-		if(!isFullscreen() && fullscreenchange)	full=0;
-		if(window.innerWidth < window.innerHeight) rotate=0;
+		if(!isFullscreen() && fullscreenchange) full=0;
+		if(window.innerWidth < window.innerHeight)	rotate=0;
 		if(window.innerWidth > 800) full=rotate=1; else mobile=true;
 	}
 	if(rotate==0) $(".mobile-menu p").show(); else  $(".mobile-menu p").hide();
